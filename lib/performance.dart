@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:apistockedge/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart'as http;
 import 'package:percent_indicator/percent_indicator.dart';
 
 class Performance extends StatefulWidget {
@@ -14,7 +14,7 @@ class Performance extends StatefulWidget {
 
 class _PerformanceState extends State<Performance> {
   Future<List<dynamic>> getperformance() async {
-    var response = await get(
+    var response = await http.get(
       Uri.parse(
           'https://api.stockedge.com/Api/SecurityDashboardApi/GetTechnicalPerformanceBenchmarkForSecurity/5051?lang=en'),
     );
