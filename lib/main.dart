@@ -8,7 +8,7 @@ import 'package:apistockedge/performance.dart';
 
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart'as http;
 
 import './overview.dart';
 
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+        debugShowCheckedModeBanner: false,
       home: APIstockedge(),
     );
   }
@@ -44,7 +45,7 @@ class _APIstockedgeState extends State<APIstockedge> {
 
   Future<List<dynamic>> fetchperformance() async {
   
-    final response = await get(Uri.parse(
+    final response = await http.get(Uri.parse(
         'https://api.stockedge.com/Api/SecurityDashboardApi/GetTechnicalPerformanceBenchmarkForSecurity/5051?lang=en'));
 
     if (response.statusCode == 200) {
