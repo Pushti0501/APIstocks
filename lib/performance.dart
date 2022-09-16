@@ -69,35 +69,38 @@ class _PerformanceState extends State<Performance> {
                                     style: kperformancetext,
                                   ),
                                 ),
-                                Container(
-                                  width: 180.0,
-                                  alignment: Alignment.center,
-                                  child: Expanded(
-                                      child: (Changepercent > 100)
-                                          ? Align(
-                                              child:
-                                                  (LinearPercentIndicator(
-                                                barRadius: const Radius.circular(5.0),
-                                                width: 180.0,
-                                                lineHeight: 24.0,
-                                                percent: 1.0,
-                                                backgroundColor:
-                                                    Colors.grey[200],
-                                                progressColor: Colors.green,
-                                              )),
-                                            )
-                                          : (LinearPercentIndicator(
-                                              barRadius: const Radius.circular(5.0),
-                                              width: 180.0,
-                                              lineHeight: 24.0,
-                                              percent:
-                                                  (Changepercent / 100).abs(),
-                                              backgroundColor: Colors.grey[200],
-                                              progressColor: Changepercent > 0.0
-                                                  ? Colors.green
-                                                  : Colors.red,
-                                            ))),
-                                ),
+                                 Container(
+                                    width: 180.0,
+                                    alignment: Alignment.center,
+                                    child: 
+                                       (Changepercent > 100)
+                                                ? Align(
+                                                    child:
+                                                        (LinearPercentIndicator(
+                                                      barRadius: const Radius.circular(5.0),
+                                                      width: 180.0,
+                                                      lineHeight: 24.0,
+                                                      percent: 1.0,
+                                                      backgroundColor:
+                                                          Colors.grey[200],
+                                                      progressColor: Colors.green,
+                                                    )),
+                                                  )
+                                                : (LinearPercentIndicator(
+                                                    barRadius: const Radius.circular(5.0),
+                                                    width: 180.0,
+                                                    lineHeight: 24.0,
+                                                    percent:
+                                                        (Changepercent / 100).abs(),
+                                                    backgroundColor: Colors.grey[200],
+                                                    progressColor: Changepercent > 0.0
+                                                        ? Colors.green
+                                                        : Colors.red,
+                                                  )),
+                                   
+                                  ),
+                                
+                             
                                 Expanded(
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
