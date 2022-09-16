@@ -96,7 +96,7 @@ class _PerformanceState extends State<Performance> {
                                                     progressColor: Changepercent > 0.0
                                                         ? Colors.green
                                                         : Colors.red,
-                                                  )),
+                                                  ))
                                    
                                   ),
                                 
